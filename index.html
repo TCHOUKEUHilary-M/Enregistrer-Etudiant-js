@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etudiantTWF</title>
+    <link rel="stylesheet"  type="text/css" href="bootstarp/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="etudiant.css">
+</head>
+
+<body>
+    <section id="body">
+    <h1 class=" bg-primary titre rounded-3 "  >Etudiants</h1>
+    <div class="table">
+
+        <div class="table1">
+            <table id='tab' style="width: 750px">
+                <tr>
+                    <th>N <sup>o</sup>:</th>
+                    <th>Matricule </th>
+                    <th>Noms et prenoms</th>
+                    <th>Parcours</th>
+                    <th>Sexe</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+    <button class=" btn-success rounded-3 "  id="nouv">Nouveau</button>
+    <div id="blocetud">
+        <form id="etud">
+            <h1 class=" bg-primary titre rounded-3 " >Enregistrez un Etudiants</h1>
+            <p><label for="Matricule">Matricule</label><input type="text" name="Matricule"
+                    placeholder="entrez votre Matricule" id="matricule">
+            <p><label for="nom">Noms et prenoms</label><input type="text" name="nom"
+                    placeholder="entrez votre nom complet" id="nom">
+            </p>
+            <p><label for="ddn">Date_Naissannce</label><input type="date" name="ddn" id="date"></p>
+            <p><label for="lieu">Lieu de naissance</label><input type="text"
+                    placeholder="Entrez votre lieu de naissance" id="lieu"></p>
+            <p><label for="taille">Taille</label><input type="text" name="taille" placeholder="entrez votre taille"
+                    id="taille"></p>
+            <p><label for="poids">Poids</label><input type="text" name="poids" placeholder="entrez votre Poids"
+                    id="poids"></p>
+            <p><label for="">Parcours</label>
+                <select id="parcours">
+                    <option value="Art numerique">Art numerique</option>
+                    <option value="Data science">Data science</option>
+                    <option value="Developement web">Developement web</option>
+                </select>
+            </p>
+            <p><label for="sex">Sexe</label>
+                <input type="radio" name="sex" value="F" id="Fem">Feminin
+                <input type="radio" name="sex" value="M" id="Mas">Masculin
+            </p>
+        </form>
+        
+        <button class=" btn-success rounded-3 " id="register">Enregistrer</button>
+        <button class=" btn-success rounded-3 " id="delete">Suprimer</button>
+    </div>
+    <div>
+        <h1 class=" bg-primary titre rounded-3 " >Liste des matieres</h1>
+        <div class="table">
+            <table id="table">
+                <tr>
+                    <th>Code</th>
+                    <th>Nom</th>
+                    <th>volume Horaire</th>
+                    <th>Proffeseur</th>
+                    <th>Assisttant</th>
+                    <th>drapeau matiere</th>
+                </tr>
+            </table>
+        </div>
+        <button class=" btn-success rounded-3 " id="ajouter">Ajouter</button>
+        <form action="" id="form1">
+            <h1 class=" bg-primary titre rounded-3 " >Enregistrez une matières</h1>
+            <p><label for="code1">Code Matiere</label><input type="text" id='code1' name="matiere"
+                    placeholder="code matiere"></p>
+            <p><label for="nom1">Nom Matiere</label><input type="text" id='nom1' placeholder="nom matiere"></p>
+            <p><label for="volume1">Volume horraire</label> <input type="text" id='volume1'
+                    placeholder="volumeHoraire matiere"></p>
+            <p><label for="prof">Proffeseur</label><input type="text" id='prof' placeholder="prof matiere"></p>
+            <p><label for="ass">Assistant</label><input type="text" id='ass' placeholder="assistant matiere"></p>
+            <p><label for="drap1">drapeau Matiere</label><input type="text" id='drap' placeholder="drapeau matiere"></p>
+            <p><input class=" btn-success rounded-3 " type="submit" value="Valider" id="bouton"></p>
+        </form>
+    </div>
+    <div class="table2">
+        <h1 class=" bg-primary titre rounded-3 " >Note</h1>
+        <table id="tablen">
+            <tr>
+                <th>Matiere</th>
+                <th>Note</th>
+            </tr>
+        </table>
+        <button class=" btn-success rounded-3 " id="newnote">Nouveau</button>
+        <div>
+        <form id="notef">
+            <h1 class=" bg-primary titre rounded-3 " >Enregistrer une note</h1>
+            <p><label>matiere</label><input type="text" placeholder="matier" id="matiere">
+                <p><label>Note</label><input type="number" id="note"></p>
+                <button class=" btn-success rounded-3 " id="ajoutnote">Ajouter</button>
+        </form>
+        
+    </div>
+    </section>
+    <script src="etudiant.js"></script>
+    <script src="bootstarp/js/bootstrap.min.js"></script>
+</body>
+
+</html>
